@@ -12,14 +12,14 @@ let filePath = argv[1];
 
 request(requestedURL, (error, response, body) => {
   if (error) {
-    console.log(error)
+    console.log(error);
   } else {
     fs.writeFile(filePath, body, (err) => {
       if (error)
-        console.log(err)
+        console.log(err);
       else {
-        console.log(`Downloaded and saved ${fs.statSync(filePath).size} bytes to ${filePath}`)
+        console.log(`Downloaded and saved ${fs.statSync(filePath).size} bytes to ${filePath}`);
       }
     });
   }
-})
+});
